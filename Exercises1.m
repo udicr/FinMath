@@ -19,4 +19,31 @@ C(2,2) = 3
 M = [1 -1 3; 4 8 -2; 0 5 -9];
 x1 = M(1,:);
 y = M(2:3,:);
-s = 
+s = zeros(1,3);
+for j = 1:3
+   s(j) = sum(M(:,j));
+end
+s
+sum(M)
+elements = sum(sum(M))
+index = find(abs(M)==max(max(abs(M))))
+max(max(abs(M)))
+
+x = inv(M) * [1,3,2]'
+x = M\[1;3;2]
+
+index = find(M<0);
+M(index)=0
+
+%%Ex5
+for i=0:20
+    if mod(i,2)==0
+        str = sprintf('%i even', i)
+    else
+        str = sprintf('%i odd',i)
+    end
+end
+
+%%Ex6
+N = 100;
+ExpValue(N)
