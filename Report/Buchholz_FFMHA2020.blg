@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Buchholz_FFMHA2020.aux
 The style file: abbrv.bst
 Database file #1: References.bib
-You've used 1 entry,
+You've used 2 entries,
             2118 wiz_defined-function locations,
-            502 strings with 3953 characters,
-and the built_in function-call counts, 187 in all, are:
-= -- 17
-> -- 1
+            506 strings with 4117 characters,
+and the built_in function-call counts, 354 in all, are:
+= -- 34
+> -- 2
 < -- 0
-+ -- 1
++ -- 2
 - -- 0
-* -- 6
-:= -- 28
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
+* -- 10
+:= -- 47
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 7
-empty$ -- 24
+cite$ -- 2
+duplicate$ -- 14
+empty$ -- 47
 format.name$ -- 0
-if$ -- 43
+if$ -- 85
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 2
 missing$ -- 0
-newline$ -- 8
+newline$ -- 13
 num.names$ -- 0
-pop$ -- 9
+pop$ -- 18
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 6
 quote$ -- 0
-skip$ -- 6
+skip$ -- 12
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 10
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 8
 warning$ -- 0
 while$ -- 0
-width$ -- 2
-write$ -- 11
+width$ -- 3
+write$ -- 20

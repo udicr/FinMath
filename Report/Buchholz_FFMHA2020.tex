@@ -118,15 +118,43 @@
 	\end{itemize}
 	As starting date $ t=0 $ Friday the 20st November is choosen.
 	The maturity date of the products is Friday 21st January 2022.
-	More precisely the structured product, which will be discussed later, are build on the data presented below, accessed at Friday 20st November at 4:00 pm (MEZ), which is half an hour after the market opening at that day. \\
-    \begin{tabular}%
-		%\bfseries Person & \bfseries Matr.~No.% specify table head
-		%\csvreader{test.csv}% use head of csv as column names
-		%{\\\hline\givenname\ \name & \matriculation}% specify your coloumns here
-		\bfseries  & \bfseries Zeroed time (s)% specify table head
-		\csvreader[head to column names]{Basket_ball.csv}{}% use head of csv as column names
-		{\\\hline\csvcoli&\csvcolii}% specify your coloumns here
-    \end{tabular}
+	More precisely the structured product, which will be discussed later, are build on the data presented below, accessed at Friday 20st November at 4:45 pm (MEZ), which is one hour and a quarter after the market opening at that day. The data is shown in the tables at the end of this section. \\
+	\begin{table*}[!ht]
+		\csvreader[%
+		tabular={|c|c|c|c|c|c|c|},
+		table head = \hline\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask}  & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline,
+		late after line= \\,
+		late after last line=\\\hline %
+		]{../data/yahoo_pc_stat_210122_table0_20112020_16:45:35}{LastTradeDate=\LastTradeDate,Strike=\Strike,LastPrice=\LastPrice,Bid=\Bid,Ask=\Ask,Volume=\Volume,ImpliedVolatility=\ImpliedVolatility}%
+		{\LastTradeDate &\Strike & \LastPrice & \Bid & \Ask & \Volume & \ImpliedVolatility}
+		\centering
+		\caption{\label{table1}European Call Options AMD (data extracted from \cite{site_yahoofinance} at 20/11/2020 16:45:35)}
+	\end{table*}
+	\begin{table*}[!ht]
+		\csvreader[%
+		tabular={|c|c|c|c|c|c|c|c|},
+		table head = \hline\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask} & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline,
+		late after line= \\,
+		late after last line=\\\hline %
+		]{../data/yahoo_pc_stat_210122_table1_20112020_16:45:35}{LastTradeDate=\LastTradeDate,Strike=\Strike,LastPrice=\LastPrice,Bid=\Bid,Ask=\Ask,Volume=\Volume,ImpliedVolatility=\ImpliedVolatility}%
+		{\LastTradeDate &\Strike & \LastPrice & \Bid & \Ask & \Volume & \ImpliedVolatility}
+		\centering
+		\caption{\label{table2}European Put Options AMD (data extracted from \cite{site_yahoofinance} at 20/11/2020 16:45:35)}
+	\end{table*}
+%		\begin{table*}[!ht]
+%		\csvreader[%
+%		tabular={|c|c|c|c|c|c|c|c|c|},
+%		table head = \hline\textbf{{ContractName}} &\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask} & \textbf{Change} & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline,
+%		late after line= \\,
+%		late after last line=\\\hline %
+%		]{test.csv}{ContractName=\ContractName,LastTradeDate=\LastTradeDate,Strike=\Strike,LastPrice=\LastPrice,Bid=\Bid,Ask=\Ask,Change=\Change,Volume=\Volume,ImpliedVolatility=\ImpliedVolatility}%
+%		{\ContractName & \LastTradeDate &\Strike & \LastPrice & \Bid & \Ask & \Change & \Volume & \ImpliedVolatility}
+%		\centering
+%		\caption{\label{table1}Calls}
+%	\end{table*}
+
+
+
 	To get a fixed interest rate for the whole time period we the daily treasure yield rate of the US treasure bond at the starting date $ t=0 $ is picked, which we denote by $ r = 0.11 \% $.
 	In the table below the relevant data is shown, which is published at \cite{site_treasure}
     an official website of the United States Government.

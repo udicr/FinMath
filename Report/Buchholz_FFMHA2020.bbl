@@ -4,6 +4,12 @@
 Daily treasury yield curve rates - the united states government.
 \newblock
   \url{https://www.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield}.
-\newblock Accessed: 2020-11-20.
+\newblock Accessed: 2020-11-20 - 16:45:35.
+
+\bibitem{site_yahoofinance}
+yahoo! finance - advanced micro devices, inc.(amd) - options.
+\newblock
+  \url{https://finance.yahoo.com/quote/AMD/options?p=AMD&date=1642723200}.
+\newblock Accessed: 2020-11-20 - 16:45:35.
 
 \end{thebibliography}
