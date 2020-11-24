@@ -12,3 +12,4 @@ put = ex1_a(S0,r,T,K,u,d,"Put")
 
 %% Put Call Parity
 Put_PCP = (call - S0 + K*exp(-r*T))
+difference = Put_PCP - put
