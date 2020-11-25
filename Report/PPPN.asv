@@ -1,0 +1,11 @@
+%% Example
+N = 100;
+S0 = 50;
+K1 = 45;
+K2 = 55;
+r = 0.0011;
+T = 14/12;
+
+ST = 0:100
+Y = total_payoff_PPPN(ST,K1,K2,S0,N)
+P

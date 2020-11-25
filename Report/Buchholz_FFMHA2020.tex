@@ -21,6 +21,7 @@
 \usepackage{tikz}
 \usepackage{course}
 \usepackage{csvsimple}
+\usepackage{float}
 
 \renewcommand{\sectionmark}[1]{\markboth{#1}{#1}}
 \renewcommand{\subsectionmark}[1]{\markright{#1}}
@@ -118,8 +119,19 @@
 	\end{itemize}
 	As starting date $ t=0 $ Friday the 20st November is choosen.
 	The maturity date of the products is Friday 21st January 2022.
-	More precisely the structured product, which will be discussed later, are build on the data presented below, accessed at Friday 20st November at 4:45 pm (MEZ), which is one hour and a quarter after the market opening at that day. The stock price at this moment was $ S=85.35 USD $. The data is shown in the tables at the end of this section. A small extract of the data is moreover shown in a associated screenshot in the appendix. As the tables already contain the full data, the screenshot only shows the stock price and the first few call options.  \\
-	\begin{table*}[!ht]
+	More precisely the structured product, which will be discussed later, are build on the data presented below, accessed at Friday 20st November at 4:45 pm (MEZ), which is one hour and a quarter after the market opening at that day. The stock price at this moment was $ S_0=85.35 \text{ USD} $. The data is shown in the tables at the end of this section. A small extract of the data is moreover shown in a associated screenshot in the appendix. As the tables already contain the full data, the screenshot only shows the stock price and the first few call options.  \\
+
+
+	To get a fixed interest rate for the whole time period, the daily treasure yield rate of the US treasure bond at the starting date $ t=0 $ is picked, which we denote by $ r = 0.11 \% $.
+	In the appendix also an associated table is shown, which is published at \cite{site_treasure}
+    an official website of the United States Government.
+   
+	
+	
+	The reason of choice is that the base interest rate of the United States, the United States Fed Funds Rate, is given by a target range of $ 0-0.25 \% $. Moreover the Daily Treasury Yield Curve Rates are given for different time periods exactly. Since the time period of our products is around one year and two months the rate for an investment over one year is picked. As the investment is even longer than one year, that is a rather cautious estimate for the interest rate.
+	
+	
+		\begin{table*}[!ht]
 		\csvreader[%
 		tabular={|c|c|c|c|c|c|c|},
 		table head = \hline\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask}  & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline,
@@ -141,30 +153,16 @@
 		\centering
 		\caption{\label{table2}European Put Options AMD (data extracted from \cite{site_yahoofinance} at 20/11/2020 16:45:35)}
 	\end{table*}
-%		\begin{table*}[!ht]
-%		\csvreader[%
-%		tabular={|c|c|c|c|c|c|c|c|c|},
-%		table head = \hline\textbf{{ContractName}} &\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask} & \textbf{Change} & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline,
-%		late after line= \\,
-%		late after last line=\\\hline %
-%		]{test.csv}{ContractName=\ContractName,LastTradeDate=\LastTradeDate,Strike=\Strike,LastPrice=\LastPrice,Bid=\Bid,Ask=\Ask,Change=\Change,Volume=\Volume,ImpliedVolatility=\ImpliedVolatility}%
-%		{\ContractName & \LastTradeDate &\Strike & \LastPrice & \Bid & \Ask & \Change & \Volume & \ImpliedVolatility}
-%		\centering
-%		\caption{\label{table1}Calls}
-%	\end{table*}
-
-
-
-	To get a fixed interest rate for the whole time period we the daily treasure yield rate of the US treasure bond at the starting date $ t=0 $ is picked, which we denote by $ r = 0.11 \% $.
-	In the table below the relevant data is shown, which is published at \cite{site_treasure}
-    an official website of the United States Government.
-	//todo includgraphic 
-	
-	The reason of choice is that the base interest rate of the United States, the United States Fed Funds Rate is given by a target range of $ 0-0.25 \% $. Moreover the Daily Treasury Yield Curve Rates are given for different time periods exactly. Since the time period of our products is around one year and two months the rate for an investment over one year is picked. As the investment is even longer than one year, that is a rather cautious estimate for the interest rate.
-	$\cdot$
 	\newpage
 	\section{Product 1: Partially principal protected note (PPPN)}
 	\subsection{Descriptive part: What is a PPPN and why is it interesting?}
+	A partially principal protected note (PPPN) is an investment option over an underlying stock, in our case AMD. Many people are initially skeptical when it comes to investing in stocks. The reason for this is that the opportunities come with risks. A PPPN is en investment option, where the risk is partially absorbed. Imagine for instant investing $850 \text{ USD}$ in a PPPN with fixed maturity date $ T $ over an underlying stock with initial stock price $ S_0 = 85 \text{ USD} $.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{payoff_PPPN.jpg}
+		 \caption{payoff for an PPPN}
+	\end{figure} 
+	
 	\subsection{Technical Part: How does a PPPN work?}
 	\newpage
 	\section{Product 2: Airbag note (AN)}
@@ -173,9 +171,20 @@
 	\cleardoublepage
 	\section{Appendix}
 	\subsection{Screenshot of the market data}
-	
-	\includegraphics[width=\linewidth]{screenshot.png}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{screenshot.png}
+		\caption{\label{treasure}Small extract of the relevant market data from \cite{site_yahoofinance}} 
+	\end{figure}
+	\subsection{Daily Treasury Yield Curve Rates}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{treasure.png}
+		\caption{\label{treasure}Daily Treasury Yield Curve Rates from \cite{site_treasure}} 
+	\end{figure}
 	\newpage
 	\bibliographystyle{abbrv}
 	\bibliography{References}
+	
+	 
 \end{document}
