@@ -26,6 +26,7 @@ ylabel('total payoff at maturity')
 %% Concrete product
 N = 100;
 S0 = 85.35;
+p = 0.6;
 r = 0.0011;
 T = 14/12;
 putbid = 8.3;
@@ -33,8 +34,8 @@ callask = 18.5;
 p = 0.3;
 
 N_fixed = exp(-r*T)*N;
-N_remaining = N -N_fixed + N/A*putbid
-N_calls = N/S0*p*callask
+N_remaining = N -N_fixed + (1-p)*putbid
+N_calls = p*callask
 
 
 

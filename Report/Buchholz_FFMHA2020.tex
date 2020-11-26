@@ -182,6 +182,7 @@
 		\caption{payoff for the concrete PPPN offer}
 	\end{figure} 
 	If the stock goes up $ 100 \% $ till the maturity day one would end up with $ 117.52 \text{ USD}$ for an investment of  $ N = 85.35 \text{ USD} $ . And no matter how the stock moves in the next $ 14 $ months one can never end up with less than $ 76.5 \text{ USD} $.
+	\newpage
 	\subsection{Technical Part: How does a PPPN work?}
 	A PPPN is the combination of three different assets:
 	\begin{itemize}
@@ -249,16 +250,41 @@
 	 \[
 	 	\text{payoff} = N + p \cdot \frac{N}{S_0}(S_T - S_0)
 	 \] 
-	 with a fixed participation rate $ p $. Of course the participation rate $ p $ will be lower than one, which means in that case the investor will get a little bit less as if he had invested directly in a stock - that is the trade off in reducing the risk. But in contrast to the PPPN there is no scenario where the stock goes up and the investor will not also make profit from it.
-	 
+	 with a fixed participation rate $ p $. Of course the participation rate $ p $ will be lower than one, which means in that case the investor will get a little bit less as if he had invested directly in a stock - that is the trade off in reducing the risk. But in contrast to the PPPN there is no scenario where the stock goes up and the investor will not also make profit from the airbag note.
+	 As before we can plot the payoff in dependence of $ S_T $:
 	 \begin{figure}[H]
 	 	\centering
 	 	\includegraphics[width=0.8\linewidth]{payoff_AN.jpg}
 	 	\caption{payoff an example AN with $ p = 0.6 $}
 	 \end{figure}
-
+	Again the yellow line represents the direct investment in the underlying stock and the dashed verticle lines are representing the initial stock price $ S_0 $ and the airbag level $ A = 0.8 \cdot S_0 $.
 	\subsection{Concrete Product}
+	The concrete product which can be offered has the following specifications:
+	\begin{itemize}
+		\item Since the underlying stock is AMD, consider $ S_0 = 85.35 \text{ USD} $.
+		\item The investment can be any multiple of $ N = 85.35 \text{ USD} $ which is the stock price $ S_0 $.
+		\item The maturity date is $ 21st $ January $ 2022 $ so the duration $ T = 14 $ months.
+		\item As Airbag level $ A = 0.8 \cdot S_0  = 68.28 \text{ USD} $ is picked.
+		\item The participation rate which can be offered is $ p = ?? \% $ %TODO
+	\end{itemize}
+	Then the total payoff can be visualized in the same way as in the descriptive part:
+	
 	\subsection{Technical Part: How does a AN work?}
+	the put option \\
+	
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask} & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline
+		2020-11-19 2:43PM EST & 67.5 & 8.6 & 8.3 & 8.5 & 12 & 48.82\%
+		\\\hline
+	\end{tabular}\\
+	$\newline$
+	and for the Call option
+	
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask} & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline
+		2020-11-20 10:05AM EST & 85.0 & 18.45 & 18.15 & 18.5 & 7 & 50.39\%
+		\\\hline
+	\end{tabular}
 	\cleardoublepage
 	\section{Appendix}
 	\subsection{Screenshot of the market data}
