@@ -1,5 +1,0 @@
-function out = bs(S0,K,r,T,n(i),sigma,optioption_type)
-%UNTITLED8 Summary of this function goes here
-d1 = log(S0/k)+(r+sigma^2/2
-end
-

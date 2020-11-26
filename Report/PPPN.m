@@ -19,7 +19,7 @@ plot(ST,payoff)
 hold on
 plot(ST,N*ones(1,length(ST)),'--','LineWidth',1)
 plot(ST,(N/S0)*ST,'LineWidth',1)
-plot(S0,N,'*')
+xline(S0,'--')
 legend({'total payoff of the PPPN at S_T','initial investment','direct investment in stocks','S0'},'FontSize',10)
 hold off
 xlabel('stock price S_T at maturity')
@@ -53,7 +53,7 @@ plot(ST,payoff)
 hold on
 plot(ST,N*ones(1,length(ST)),'--','LineWidth',1)
 plot(ST,(N/S0)*ST,'LineWidth',1)
-plot(S0,N,'*')
+xline(S0,'--')
 legend({'total payoff of the PPPN at S_T','initial investment','direct investment in stocks','S0'},'FontSize',10)
 hold off
 xlabel('stock price S_T at maturity')

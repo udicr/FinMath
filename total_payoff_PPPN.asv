@@ -1,5 +1,0 @@
-function out = total_payoff_PPPN(ST,K1,K2,N)
-if ST < K1
-    out = 0.9*N + N/S0
-end
-
