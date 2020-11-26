@@ -1,10 +1,11 @@
 \contentsline {section}{\numberline {1}Introduction, Assumptions and relevant market data}{1}{section.1}%
 \contentsline {section}{\numberline {2}Product 1: Partially principal protected note (PPPN)}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Descriptive part: What is a PPPN and why is it interesting?}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Technical Part: How does a PPPN work?}{4}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Product 2: Airbag note (AN)}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Descriptive part: What is a AN and why is it interesting?}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Technical Part: How does a AN work?}{5}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Appendix}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Screenshot of the market data}{6}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Daily Treasury Yield Curve Rates}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {2.2}Concrete product}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Technical Part: How does a PPPN work?}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Product 2: Airbag note (AN)}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Descriptive part: What is a AN and why is it interesting?}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Technical Part: How does a AN work?}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Appendix}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Screenshot of the market data}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Daily Treasury Yield Curve Rates}{9}{subsection.4.2}%
