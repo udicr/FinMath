@@ -162,7 +162,7 @@
 	 The PPPN is preventing exactly that: One cannot loose more then $ 10 \% $ of the initial investment. But additionally there is profit if the stock rises above a certain strike $\underline{\text{and}}$ if the stock falls below another fixed strike. The following plot explains what exactly is meant for the example situation above ($ S_0 = 85 \text{ USD}$ and an initial investment of $ 850 \text{ USD} $ with strikes $ K_1 = 60\text{ USD} $ and  $ K_2 = 110\text{ USD} $): 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\linewidth]{payoff_PPPN.jpg}
+		\includegraphics[width=0.6\linewidth]{payoff_PPPN.jpg}
 		 \caption{payoff for an PPPN}
 	\end{figure} 
 	The yellow line represents the direct investment in the stock, where the blue line represents the total payoff of the PPPN. One can see that there is less risk but one has to pay with a smaller profit in the case of a rising stock and a possible loss of up to $ 10 \% $ if the stock stays close to $ S0 $.  Therefore one can get profit even in the case that the stock goes down.
@@ -218,7 +218,7 @@
 	c_{\text{cal,ask}} &= 6.95 \text{ USD} \approx 0.081429 S_0  \\
 	N_{\text{options}} &= \frac{N}{S_0} 0.017575 S_0 + \frac{N}{S_0} 0.081429 S_0 \approx 0.099004 N
 	\end{align*}
-	The remaining amount  is then a small profit for the bank for selling the option. For  Let us now have a look at the payoff of those three assets at maturity:
+	The remaining amount ($ \approx 0.002146 N $) is then a small profit for the bank for selling the option. Let us now have a look at the payoff of those three assets at maturity:
 	\begin{itemize}
 		\item The risk free asset will end up at $ 0.9\cdot N $.
 		\item Each of the $ a $ Put options generates a payoff at maturity of $ \text{payoff}_{\text{put}} = (K_1-S_T)^{+} $.
@@ -235,7 +235,7 @@
 		\end{cases} \\
 	\end{align*}
 	and the bank just delivers to the investor the payoff in every case. 
-	For an investment of \[N = 10\cdot S_0 = 853.5 \text{ USD} \] this would give the bank a profit of around $ 1.8352 \text{ USD} $ by having nearly no risk. Additional margin can be achieved if one is able to invest the risk free asset with a slightly higher interest rate or if its possible to get the desired options a little bit under the ask value.
+	For an investment of \[N = 10\cdot S_0 = 853.5 \text{ USD} \] this would give the bank a profit of around $ 1.84 \text{ USD} $ by having nearly no risk following the common assumptions. Additional margin can be achieved if one is able to invest the risk free asset with a slightly higher interest rate or if its possible to get the desired options a little bit under the ask value.
 	\newpage
 	\section{Product 2: Airbag note (AN)}
 	\subsection{Descriptive part: What is a AN and why is it interesting?}
@@ -254,24 +254,45 @@
 	 As before we can plot the payoff in dependence of $ S_T $:
 	 \begin{figure}[H]
 	 	\centering
-	 	\includegraphics[width=0.8\linewidth]{payoff_AN.jpg}
+	 	\includegraphics[width=0.6\linewidth]{payoff_AN.jpg}
 	 	\caption{payoff an example AN with $ p = 0.6 $}
 	 \end{figure}
 	Again the yellow line represents the direct investment in the underlying stock and the dashed verticle lines are representing the initial stock price $ S_0 $ and the airbag level $ A = 0.8 \cdot S_0 $.
 	\subsection{Concrete Product}
 	The concrete product which can be offered has the following specifications:
 	\begin{itemize}
+		\item The investment can be any multiple of $ N = 1707 \text{ USD} $. If the bank is capable of buying and selling partial options, for instance if it is expected that the product is sold often and the bank can handle multiple customers together, also less artificial numbers for $ N $ are possible. 
 		\item Since the underlying stock is AMD, consider $ S_0 = 85.35 \text{ USD} $.
 		\item The investment can be any multiple of $ N = 85.35 \text{ USD} $ which is the stock price $ S_0 $.
 		\item The maturity date is $ 21st $ January $ 2022 $ so the duration $ T = 14 $ months.
-		\item As Airbag level $ A = 0.8 \cdot S_0  = 68.28 \text{ USD} $ is picked.
-		\item The participation rate which can be offered is $ p = ?? \% $ %TODO
+		\item As Airbag level $ A = l \cdot S_0 = 0.8 \cdot S_0  = 68.28 \text{ USD} $ is picked.
+		\item The participation rate which can be offered is $ p = 55 \% $ .
 	\end{itemize}
 	Then the total payoff can be visualized in the same way as in the descriptive part:
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{AN_concrete.jpg}
+		\caption{payoff for the concrete AN offer}
+	\end{figure}
+	If the stock goes up $ 100 \% $ till the maturity day one would end up with $ 2645.85 \text{ USD}$ for an investment of  $ N = 1707 \text{ USD} $ . That is a gain of $ 55 \% $. If the stock price ends up to be somewhere between $ S_0 $ and the airbag level (in our case $ 0.8 * S_0 $) then a possible investor just obtains his investment. Note, that below that airbag level no complete downside protection is guaranteed, but a possible investor would nevertheless end up higher than in the case of an direct investment in the underlying stock.
 	\subsection{Technical Part: How does a AN work?}
-	the put option \\
+	An Airbag Note is again the combination of the three assets, we already saw before:
+	\begin{itemize}
+		\item A risk free asset with interest rate $ r $.
+		\item Call options on the underlying stock.
+		\item Put options on the underlying stock.
+	\end{itemize}
+	A big difference in contrast to the PPPN is that the Put options will not get bought by the bank. Quite the reverse! To design the AN the Put options have to be sold by the bank, in other words: the bank goes short on the put options. So how does it work?
 	
+	Again first it has to be determined the part of the investment which has to be invested in the risk free asset. Therefore we are now discounting the full initial investment by the interest rate $ r $ over the time period $ T $.  In our case consider again an investment in the US Treasure Bond of 
+	\[
+		N_\text{fixed} = N \cdot \exp(-rT) = \exp(-0.0011\frac{14}{12})N 
+	\]
+	In the case of $ N = 1707 \text{ USD} $ this is corresponding to $ 1704.81 \text{ USD} $.
+	Now the bank goes short $ \frac{N}{A} $ put options with strike $ A $. 
+	Considering the chosen participation rate that is just enough to buy (together with the remaining few dollars which are not invested in the risk free asset) exactly $ \frac{pN}{S_0} $ Call options with strike $ S_0 $. $ N $ is chosen in way to obtain natural numbers for $ \frac{N}{A} $ and $\frac{pN}{S_0}$. That is also the reason why the concrete number might look artificial. To look up the prices of these options we have to look up again the tables of relevant market data. 
+	
+	We can find for the put option \\
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask} & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline
 		2020-11-19 2:43PM EST & 67.5 & 8.6 & 8.3 & 8.5 & 12 & 48.82\%
@@ -285,6 +306,78 @@
 		2020-11-20 10:05AM EST & 85.0 & 18.45 & 18.15 & 18.5 & 7 & 50.39\%
 		\\\hline
 	\end{tabular}
+	
+	Note that we choose the strike of the put a little bit lower than $ S_0*0.8 = 68.28 \text{ USD} $. This will make sure that the always end up a tiny bit higher then the actual agreed  
+	payoff. In the same reasoning the strike of the Call is chosen just a little bit below $ S_0 $. The reason why we have to consider those is that the strikes are not offered in a continuous way at the market but in discrete steps. This is discussed more precisely in the discussion about the profit of the bank at the end of this subsection.
+	
+	First check the bank is capable of buying and selling the options without making loss:
+	Since the bank goes short on put options and buys call options, the bid price of the put option and the ask price of the call option has to be considered. Thus we get:
+	\begin{align*}
+	    c_{\text{put,bid}} = 8.3 \text{ USD}  \\
+		c_{\text{call,ask}} = 18.5 \text{ USD}  
+	\end{align*}
+	Thus it remains after selling the put options, getting the few remaining dollars which are not invested in the risk free asset and buying:
+	\begin{align*}
+		N_{\text{remaining}}  &= N - N_{\text{fixed}} + \frac{N}{A}c_{\text{put,bid}} - \frac{pN}{S_0} c_{\text{call,ask}} \\
+		&= N - N_{\text{fixed}} + \frac{N}{lS_0}c_{\text{put,bid}} - \frac{pN}{S_0} c_{\text{call,ask}} \\
+		&= 0.0036N \\ 
+	\end{align*}
+	The calculation is done with Matlab to reduce rounding errors and can be found in the attached scripts (AN.m). This remaining money is one part of the margin.
+	After setting up the portfolio the bank is capable of delivering the agreed payoff at the maturity date in every scenario:
+	\begin{enumerate}
+		\item In the case the stock ends up between $ A $ and $ S_0 $ both the bought call options and the sold put options expire without any profit or loss. Then the bank just takes $ N $ from the risk free asset, which is now there since $ \exp(-rT)N $ got invested there for the time period $ T $.
+		\item If the stock ends up higher the bank has still $ N $ from the risk free asset and gets additionally $ \frac{pN}{S_0} (S_T- K_{call})$ from the call options payoff.
+		\item If the stock will fall below the airbag level $ A $, the bank will use a part of the money from the risk free asset to payout the sold put options. The payoff for the customer will then be the remaining money which is $ N - \frac{N}{A}(K_{\text{put}}-S_T) $.
+	\end{enumerate}
+	We can write the total payoff in the following way, using that $ K_{\text{put}} > A $ and $ K_{\text{call}} < S_0 $:
+	\begin{align*}
+		\text{payoff}_{\text{total}} &= N - \frac{N}{A}(K_{\text{put}}-S_T)^+ + \frac{pN}{S_0}(S_T-K_{\text{call}})^+ \\
+		&\geq N - \frac{N}{A}(A-S_T)^+ + \frac{pN}{S_0}(S_T-S_0)^+ \\
+		&= \begin{cases}
+		N - \frac{N}{A}(A - S_T) \; &\text{if } S_T < A \\
+		N  \; &\text{if } A \leq S_T \leq S_0 \\
+		N + \frac{pN}{S_0}(S_T-S_0) \; &\text{if }S_T > S_0 \\
+		\end{cases} \\
+		&= \begin{cases}
+		\frac{N}{A} S_T \; &\text{if } S_T < A \\
+		N  \; &\text{if } A \leq S_T \leq S_0 \\
+		N + \frac{pN}{S_0}(S_T-S_0) \; &\text{if }S_T > S_0 \\
+		\end{cases} \\
+	\end{align*}
+	Thus the bank can deliver the agreed payoff in every scenario.
+	Lastly lets have a look at the additional margin which the bank gets because of the choice of $ K_\text{put} $ and $ K_{\text{call}} $. Therefore we can look at the difference of the payoffs:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{differenceAN.jpg}
+		\caption{Difference of actual payoff and agreed payoff}
+	\end{figure}
+	There is nearly no difference in the case of $ A \leq S_T \leq S_0  $. Only at the borders there might be some difference which is smaller then in the other two cases.
+	If the stock is higher than $ S_0 $ the difference is from a certain point on equal to $ 0.0023N $. In a small border region the difference might be a little bit smaller.
+	If the stock is lower then $ K_{\text{put}} $ the difference is $ 0.0114N $. 
+	Together with the margin obtained at time $ t=0 $ the following margin can be derived:
+	\begin{align*}
+		 \begin{cases}
+		 \text{margin} = 0.0036N + 0.0114N \; &\text{if } S_T \leq K_\text{put} \\
+		  0.0036N \leq \text{margin} \leq 0.0036N + 0.0114N  \; &\text{if } K_\text{put }<S_T < A \\
+		   \text{margin} = 0.0036N  \; &\text{if } A \leq S_T \leq K_\text{call} \\
+		   0.0036N \leq \text{margin} \leq 0.0036N + 0.0023N  \; &\text{if } K_\text{call }<S_T < S_0 \\
+		 \text{margin} = 0.0036N + 0.0114N \; &\text{if } S_T \geq S_0
+		 \end{cases}
+	\end{align*}
+	In the concrete case of an investment of $ N = 1707 \text{ USD} $ this is corresponding to:
+	\begin{align*}
+	\begin{cases}
+	\text{margin} = 25.6 \text{ USD} \; &\text{if } S_T \leq K_\text{put} \\
+	6.15 \text{ USD} \leq \text{margin} \leq 25.6 \text{ USD}  \; &\text{if } K_\text{put }<S_T < A \\
+	\text{margin} = 6.15 \text{ USD}  \; &\text{if } A \leq S_T \leq K_\text{call} \\
+	6.15 \text{ USD} \leq \text{margin} \leq 10.07 \text{ USD}  \; &\text{if } K_\text{call }<S_T < S_0 \\
+	\text{margin} =  10.07 \text{ USD} \; &\text{if } S_T \geq S_0
+	\end{cases}
+	\end{align*}
+	Additional margin can again be achieved if one is able to invest the risk free asset with a slightly higher interest rate or if its possible to get the desired call options a little bit under the ask value or sell the put options a little bit higher the bid value.
+	
+	
+	
 	\cleardoublepage
 	\section{Appendix}
 	\subsection{Screenshot of the market data}
