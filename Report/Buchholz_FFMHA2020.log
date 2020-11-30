@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.20)  29 NOV 2020 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.20)  30 NOV 2020 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -870,10 +870,10 @@ Package pdftex.def Info: payoff_PPPN.jpg  used on input line 165.
 <PPPN_concrete.jpg, id=120, 562.1pt x 421.575pt>
 File: PPPN_concrete.jpg Graphic file (type jpg)
 <use PPPN_concrete.jpg>
-Package pdftex.def Info: PPPN_concrete.jpg  used on input line 181.
+Package pdftex.def Info: PPPN_concrete.jpg  used on input line 182.
 (pdftex.def)             Requested size: 386.95894pt x 290.21805pt.
  [5 <./PPPN_concrete.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 197--199
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
  []
 
@@ -881,30 +881,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--199
 <payoff_AN.jpg, id=137, 648.4225pt x 510.90875pt>
 File: payoff_AN.jpg Graphic file (type jpg)
 <use payoff_AN.jpg>
-Package pdftex.def Info: payoff_AN.jpg  used on input line 257.
+Package pdftex.def Info: payoff_AN.jpg  used on input line 258.
 (pdftex.def)             Requested size: 290.22105pt x 228.67506pt.
  [8 <./payoff_AN.jpg>]
 <AN_concrete.jpg, id=143, 648.4225pt x 484.81125pt>
 File: AN_concrete.jpg Graphic file (type jpg)
 <use AN_concrete.jpg>
-Package pdftex.def Info: AN_concrete.jpg  used on input line 274.
+Package pdftex.def Info: AN_concrete.jpg  used on input line 275.
 (pdftex.def)             Requested size: 386.95894pt x 289.3207pt.
  [9 <./AN_concrete.jpg>] [10]
 <differenceAN.jpg, id=153, 818.05624pt x 512.91624pt>
 File: differenceAN.jpg Graphic file (type jpg)
 <use differenceAN.jpg>
-Package pdftex.def Info: differenceAN.jpg  used on input line 351.
+Package pdftex.def Info: differenceAN.jpg  used on input line 352.
 (pdftex.def)             Requested size: 386.95894pt x 242.6203pt.
  [11] [12 <./differenceAN.jpg>]
 <screenshot.png, id=168, 748.7975pt x 734.745pt>
 File: screenshot.png Graphic file (type png)
 <use screenshot.png>
-Package pdftex.def Info: screenshot.png  used on input line 386.
+Package pdftex.def Info: screenshot.png  used on input line 387.
 (pdftex.def)             Requested size: 483.69684pt x 474.6188pt.
 <treasure.png, id=171, 762.85pt x 402.50375pt>
 File: treasure.png Graphic file (type png)
 <use treasure.png>
-Package pdftex.def Info: treasure.png  used on input line 393.
+Package pdftex.def Info: treasure.png  used on input line 394.
 (pdftex.def)             Requested size: 386.95894pt x 204.16869pt.
  [13
 
@@ -916,18 +916,18 @@ s / Pages / TextView . aspx ? data = yield$[]\OT1/cmr/m/n/10.95 .
  []
 
 ) [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 401.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 401.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 402.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 402.
  (./Buchholz_FFMHA2020.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 401.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 401.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 402.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 402.
 Package rerunfilecheck Info: File `Buchholz_FFMHA2020.out' has not changed.
 (rerunfilecheck)             Checksum: 6C125E8C4831EBEEBFBB821C84CCE707;957.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 401.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 402.
  ) 
 Here is how much of TeX's memory you used:
  21039 strings out of 481239
@@ -953,7 +953,7 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sfrm1095.pfb>
-Output written on Buchholz_FFMHA2020.pdf (17 pages, 507707 bytes).
+Output written on Buchholz_FFMHA2020.pdf (17 pages, 507742 bytes).
 PDF statistics:
  260 PDF objects out of 1000 (max. 8388607)
  210 compressed objects within 3 object streams

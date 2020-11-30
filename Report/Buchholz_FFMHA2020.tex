@@ -103,7 +103,7 @@
 	\pagenumbering{arabic}
 	
 	\section{Introduction, Assumptions and relevant market data}
-	In this assignment the design of two structured products for an underlying stock will be discussed. Namely the underlying stock is Advanced Micro Devices, Inc. , which is also known as AMD. AMD is an American multinational semiconductor company, which produces Computer processors and related technologies for business and consumer markets. 
+	In this assignment the design of two structured products for an underlying stock will be discussed. Namely the underlying stock is Advanced Micro Devices Inc. , which is also known as AMD. AMD is an American multinational semiconductor company, which produces Computer processors and related technologies for business and consumer markets. 
 	For many investors AMD is a really interesting company, as it is beside of Intel (Intel Corp. v. Advanced Micro Devices) the biggest producer for computer processors with even growing partial of the market. 
 	Additionally the recent release of the new graphics processing units (GPUs) is very promising as these represent serious competition to Nvidia graphics cards, which dominated the market in the last years.
 	
@@ -120,7 +120,7 @@
 	\end{itemize}
 	As starting date $ t=0 $ Friday the 20st November is choosen.
 	The maturity date of the products is Friday 21st January 2022.
-	More precisely the structured product, which will be discussed later, are build on the data presented below, accessed at Friday 20st November at 4:45 pm (MEZ), which is one hour and a quarter after the market opening at that day. The stock price at this moment was $ S_0=85.35 \text{ USD} $. The data is shown in the tables at the end of this section. A small extract of the data is moreover shown in a associated screenshot in the appendix. As the tables already contain the full data, the screenshot only shows the stock price and the first few call options.  \\
+	More precisely the structured products, which will be discussed later, are build on the data presented below, accessed at Friday 20st November at 4:45 pm (MEZ), which is one hour and a quarter after the market opening at that day. The stock price at this moment was $ S_0=85.35 \text{ USD} $. The data is shown in the tables at the end of this section. A small extract of the data is moreover shown in a corresponding screenshot in the appendix. As the tables already contain the full data, the screenshot only shows the stock price and the first few call options.  \\
 
 
 	To get a fixed interest rate for the whole time period, the daily treasure yield rate of the US treasure bond at the starting date $ t=0 $ is picked, which we denote by $ r = 0.11 \% $.
@@ -129,7 +129,7 @@
    
 	
 	
-	The reason of choice is that the base interest rate of the United States, the United States Fed Funds Rate, is given by a target range of $ 0-0.25 \% $. Moreover the Daily Treasury Yield Curve Rates are given for different time periods exactly. Since the time period of our products is around one year and two months the rate for an investment over one year is picked. As the investment is even longer than one year, that is a rather cautious estimate for the interest rate.
+	The reason of choice is that the base interest rate of the United States, the United States Fed Funds Rate, is given by a target range of $ 0-0.25 \% $. Moreover the daily treasury yield curve rates are given for different time periods exactly. Since the time period of our products is around one year and two months the rate for an investment over one year is picked. As the investment is even longer than one year, that is a rather cautious estimate for the interest rate.
 	
 	
 		\begin{table*}[!ht]
@@ -157,7 +157,7 @@
 	\newpage
 	\section{Product 1: Partially principal protected note (PPPN)}
 	\subsection{Descriptive part: What is a PPPN and why is it interesting?}
-	A partially principal protected note (PPPN) is an investment option over an underlying stock, in our case AMD. Many people are initially skeptical when it comes to investing in stocks. The reason for this is that the opportunities come with risks. A PPPN is en investment option, where the risk is partially absorbed and additionally there can even be profit when the stock falls under a specific level. For instance imagine investing $850 \text{ USD}$ in a PPPN with fixed maturity date $ T $ over an underlying stock with initial stock price $ S_0 = 85 \text{ USD} $.\\
+	A partially principal protected note (PPPN) is an investment option over an underlying stock, in our case AMD. Many people are initially skeptical when it comes to investing in stocks. The reason for this is that the opportunities of profit come with risks. A PPPN is en investment option, where the risk is partially absorbed and additionally there can even be profit when the stock falls under a specific level. For instance imagine investing $850 \text{ USD}$ in a PPPN with fixed maturity date $ T $ over an underlying stock with initial stock price $ S_0 = 85 \text{ USD} $.\\
 	 If one would buy the stock directly this would mean buying ten stocks. If at maturity the stock is up to a value of $ 110 \text{ USD} $ one would have a profit of $ 1100 \text{ USD} - 850 \text{ USD} = 250 \text{ USD}  $. But in the case of $ S_T = 60 \text{ USD} $ one would loose the same amount of money.
 	 The PPPN is preventing exactly that: One cannot loose more then $ 10 \% $ of the initial investment. But additionally there is profit if the stock rises above a certain strike $\underline{\text{and}}$ if the stock falls below another fixed strike. The following plot explains what exactly is meant for the example situation above ($ S_0 = 85 \text{ USD}$ and an initial investment of $ 850 \text{ USD} $ with strikes $ K_1 = 60\text{ USD} $ and  $ K_2 = 110\text{ USD} $): 
 	\begin{figure}[H]
@@ -165,15 +165,16 @@
 		\includegraphics[width=0.6\linewidth]{payoff_PPPN.jpg}
 		 \caption{payoff for an PPPN}
 	\end{figure} 
-	The yellow line represents the direct investment in the stock, where the blue line represents the total payoff of the PPPN. One can see that there is less risk but one has to pay with a smaller profit in the case of a rising stock and a possible loss of up to $ 10 \% $ if the stock stays close to $ S0 $.  Therefore one can get profit even in the case that the stock goes down.
+	The yellow line represents the direct investment in the stock, where the blue line represents the total payoff of the PPPN. One can see that there is less risk but one has to pay with a smaller profit in the case of a rising stock and a possible loss of up to $ 10 \% $ if the stock stays close to $ S0 $.  Therefore one can even get profit in the case that the stock goes down.
+	\newpage
 	\subsection{Concrete product}
 	The concrete product which can be offered has the following specifications:
 	\begin{itemize}
 		\item Since the underlying stock is AMD, consider $ S_0 = 85.35 \text{ USD} $.
 		\item The investment can be any multiple of $ N = 85.35 \text{ USD} $ which is the stock price $ S_0 $.
-		\item The maturity date is $ 21st $ January $ 2022 $ so the duration $ T = 14 $ months.
+		\item The maturity date is $ 21st $ January $ 2022 $ so the duration is $ T = 14 $ months.
 		\item As lower strike $ K_1 = 40 \text{ USD} $ is picked.
-		\item As higher strike $ K_2 = 130 \text{ USD} $ is picked.
+		\item As higher strike $ K_2 = 130 \text{ USD} $ is chosen.
 	\end{itemize}
 	Then the total payoff can be visualized in the same way as in the descriptive part:
 	\begin{figure}[H]
@@ -190,12 +191,12 @@
 		\item Call options on the underlying stock.
 		\item Put options on the underlying stock.
 	\end{itemize}
-	First we have to determine the part of the investment which has to be invested in a risk free way. Therefore we have to discount $ 90 \% $ of the initial investment by the interest rate $ r $ over the time period $ T $. In our case we consider an investment in the US Treasure Bond of 
+	First the part of the investment has to be determined, which has to be invested in a risk free way. Therefore $ 90 \% $ of the initial investment have to get discounted by the interest rate $ r $ over the time period $ T $. In the present case consider an investment in the US Treasure Bond of 
 	\[
 		N_{\text{fixed}} = 0.9 N\cdot\exp(-rT) = 0.9  \exp(-0.0011\frac{14}{12}) N = 0.89885 N \ .
 	\]
 	It remains to invest \[ N_{\text{options}} \leq N-N_{\text{fixed}} = 0.10115N \ . \]
-	We are now buying $ \frac{N}{S_0} $ European Put options for the considered maturity date with strike $ K_1 = 40 \text{ USD} $ and the same amount of European Call options for the considered maturity date with strike $ K_2 = 130 \text{ USD} $. To look up the prices of these we have to look up the tables of relevant market data stated above. We can find for the put option \\
+	The Bank is now buying $ \frac{N}{S_0} $ European Put options for the considered maturity date with strike $ K_1 = 40 \text{ USD} $ and the same amount of European Call options for the considered maturity date with strike $ K_2 = 130 \text{ USD} $. To look up the prices of these one has to look up the tables of relevant market data stated above. There can be found for the put option \\
 	
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline\textbf{{LastTradeDate}} & \textbf{Strike} & \textbf{LastPrice} & \textbf{Bid} & \textbf{Ask} & \textbf{Volume} & \textbf{ImpliedVolatility}\\\hline
@@ -211,8 +212,8 @@
 		\\\hline
 	\end{tabular}
   
-	Since we chose $ N $ as a multiple of the initial stock price $ S_0 $ the ratio $ a = \frac{N}{S_0} $ gives us a natural number which is the amount of each call and put options we have to buy.
-	With the ask prices of the options we get 
+	Since $ N $ is chosen as a multiple of the initial stock price $ S_0 $, the ratio $ a = \frac{N}{S_0} $ is a natural number, which is the amount of each call and put options the bank has to buy.
+	With the ask prices of the options the bank can calculate how much money it need for doing so. 
 	\begin{align*}
 	c_{\text{put,ask}} &= 1.5 \text{ USD} \approx 0.017575 S_0 \\
 	c_{\text{cal,ask}} &= 6.95 \text{ USD} \approx 0.081429 S_0  \\
