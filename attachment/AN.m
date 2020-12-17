@@ -47,24 +47,7 @@ ratioN_remaining = N_remaining/N
 
 
 
-%%
-STplot = 0.5*S0:0.5:1.5*S0;
-payoff = zeros(length(STplot),1);
-
-ST = 0.5*S0;
-calc = payoff_portfolio(N,N_puts,N_calls,StrikePut,StrikeCall,S0,A,ST);
-
-if ST >= S0
-   payoff = N + p*N/S0*(ST-S0);
-elseif A <= ST
-   payoff = N;
-else
-   payoff = (N/A)*ST;
-end
-difference = calc - payoff;
-ratiodifferenceh_low = difference / N 
-
-%%
+%% Plot concrete product
 STplot = 0.5*S0:0.5:1.5*S0;
 payoff = zeros(length(STplot),1);
 
@@ -84,9 +67,22 @@ xlabel('stock price S_T at maturity')
 ylabel('total payoff at maturity')
 
 
-%%Test difference between aim AN and bought options + bank account
+%%Test differences between aim AN and bought options + bank account
+ST = 0.5*S0;
+calc = payoff_portfolio(N,N_puts,N_calls,StrikePut,StrikeCall,S0,A,ST);
+
+if ST >= S0
+   payoff = N + p*N/S0*(ST-S0);
+elseif A <= ST
+   payoff = N;
+else
+   payoff = (N/A)*ST;
+end
+difference = calc - payoff;
+ratiodifferenceh_low = difference / N 
+
 ST = 1.5*S0;
-calc = payoff_comb(N,N_puts,N_calls,StrikePut,StrikeCall,S0,A,ST);
+calc = payoff_portfolio(N,N_puts,N_calls,StrikePut,StrikeCall,S0,A,ST);
 
 if ST >= S0
    payoff = N + p*N/S0*(ST-S0);
